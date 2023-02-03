@@ -25,4 +25,4 @@ if __name__ == "__main__":
             if reward is not None:
                 print(f"{user_lib[user]} Claimed daily reward - {reward['cnt']}x {reward['name']}")
             else:
-                print(f"{user_lib[user]} have clames daily reward")
+                print(f"{user_lib[user]} have clamed daily reward")
