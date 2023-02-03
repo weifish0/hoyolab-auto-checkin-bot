@@ -2,7 +2,7 @@ import genshinstats as gs
 import sys
 
 def get_argv_list(a)-> str:
-    a = a.split("_")
+    a = a.split()
     return a
     
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     user_number = len(user_lib)
     
     if user_number == 0:
-        print("No user")
+        print("找不到任何使用者")
     else:
         for user in range(user_number):
             uid = uid_lib[user]
@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
             reward = gs.claim_daily_reward()
             if reward is not None:
-                print(f"{user_lib[user]} Claimed daily reward - {reward['cnt']}x {reward['name']}")
+                print(f"{user_lib[user]} 已經自動領取了獎勵 - {reward['cnt']}x {reward['name']}")
             else:
-                print(f"{user_lib[user]} have clamed daily reward")
+                print(f"{user_lib[user]} 今天已經領取過獎勵了")
