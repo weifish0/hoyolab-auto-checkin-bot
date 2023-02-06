@@ -19,7 +19,6 @@ if __name__ == "__main__":
             token = token_lib[user]
             
             gs.set_cookie(ltuid = uid, ltoken = token)         
-            # gs.set_cookie(ltuid=144088752, ltoken="axy7xNLcwx6aFvF0orVhMdBjbk4cCDQK6t0wEDdL")
 
             reward = gs.claim_daily_reward()
             if reward is not None:
